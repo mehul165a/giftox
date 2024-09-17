@@ -6,17 +6,17 @@ const products = [
   {
     name: 'Artisan Bottle (1L)',
     description: 'Experience elegance with our Handcrafted Luxury Bottle. Each piece is meticulously crafted by skilled artisans and features a ceramic cap adorned with intricate hand-painted designs. This exquisite bottle not only elevates your collection but also serves as a stunning statement of sophistication. Perfect for showcasing your finest spirits or as a luxurious decorative accent.',
-    image: 'bottle.jpg' // Example image URL, replace with actual
+    image: 'https://i.postimg.cc/Y0XZjLYd/bottle.jpg' // Example image URL, replace with actual
   },
   {
     name: 'Elegance Elite Pen',
     description: 'Elevate your writing experience with our Elegant Pen. Featuring a sleek, refined design with a polished finish, this pen combines sophistication with functionality. Its smooth, consistent ink flow ensures effortless writing, while the comfortable grip provides ease during extended use. Perfect for making a statement in meetings or as a luxurious gift, this pen brings a touch of elegance to every word.',
-    image: 'pen.jpg' // Example image URL, replace with actual
+    image: 'https://i.postimg.cc/NjHy8Wbx/pen.jpg' // Example image URL, replace with actual
   },
   {
     name: 'Stylish Keychain',
     description: 'Add touch of elegance to your essentials with our Stylish Hook Keychain. Crafted from high-quality materials, this sleek keychain features a chic design with a durable hook for secure attachment. Whether used to hold your keys or as a stylish accessory for your bag, its modern aesthetic and functional design make it a practical and fashionable choice for everyday use.',
-    image: 'keychain.jpg' // Example image URL, replace with actual
+    image: 'https://i.postimg.cc/7Pjw1bRp/keychain.jpg' // Example image URL, replace with actual
   }
 ];
 
