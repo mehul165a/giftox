@@ -1,0 +1,259 @@
+/* General styles */
+body {
+    background-color: #000000;
+  }
+  
+  .container {
+    background-color: #000000;
+    padding: 50px 20px;
+    border-radius: 10px;
+  }
+  
+  .card {
+    height: 420px;
+    width: 320px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center !important;
+  }
+  
+  .card::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    top: -50%;
+    background-color: #000000;
+    transform: skewY(345deg);
+    transition: 2s ease-in;
+  }
+  
+  .card:hover::before {
+    top: -70%;
+    transform: skewY(390deg);
+  }
+  
+  .card .image {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card .image img {
+    max-width: 100%;
+    transition: 2s ease-in;
+  }
+  
+  .card:hover .image img {
+    width: 80%;
+  }
+  
+  .about-product {
+    position: absolute;
+    color: #fff;
+    bottom: -50px !important;
+    text-align: center;
+    left: 20%;
+    transition: 1s ease-in;
+  }
+  
+  .card:hover .about-product {
+    bottom: 20px !important;
+  }
+  
+  .buy-now {
+    color: #fff;
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+    width: 160px;
+    margin-top: 20px;
+  }
+  
+  .buy-now:focus {
+    box-shadow: none;
+  }
+  
+  .buy-now:hover {
+    color: #fff;
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+  }
+  
+  .text-white {
+    color: #fff !important;
+  }
+  
+  .text-center {
+    text-align: center !important;
+  }
+  
+  /* Products.css */
+  .modal {
+    display: none; /* Hide by default */
+  }
+  
+  .modal.show {
+    display: block; /* Show when modal state is active */
+  }
+  
+  .modal-dialog {
+    margin: 0 auto; /* Center modal horizontally */
+    max-width: 60vw; /* Ensure modal takes 60% of the viewport width */
+    width: 60vw; /* Default width for modal */
+    height: auto; /* Height auto to allow content to dictate size */
+    display: flex; /* Center modal vertically and horizontally */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    position: relative; /* Ensure the close button can be positioned absolutely */
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden; /* Prevent content overflow */
+    display: flex; /* Flexbox for layout inside modal */
+    height: auto; /* Allow content height to adjust */
+  }
+  
+  .modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align title and close button */
+    position: relative;
+  }
+  
+  .modal-header .modal-title {
+    margin: 0;
+  }
+  
+  .modal-header .close {
+    position: absolute; /* Position close button absolutely */
+    top: 15px; /* Adjust according to padding */
+    right: 15px; /* Align with the right edge */
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    color: #000; /* Close button color */
+    cursor: pointer;
+  }
+  
+  .modal-body {
+    padding: 15px;
+    display: flex; /* Use flexbox to align image and description */
+    flex-direction: row; /* Row direction for desktop */
+  }
+  
+  .modal-body-image {
+    width: 40%; /* Image takes up 40% of the width */
+    margin-right: 15px; /* Space between image and description */
+  }
+  
+  .modal-body-image img {
+    margin-right: 0; /* Remove margin for mobile */
+      margin-left: 100%;
+      margin-bottom: 2px; /* Space between image and description */
+      width: 50%; /* Ensure image takes full width on mobile */
+  }
+  
+  .modal-body-description {
+    width: 100%; /* Description takes up 60% of the width */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .modal-footer {
+    border-top: 1px solid #dee2e6;
+    padding: 15px;
+    text-align: center; /* Center align footer content */
+  }
+  
+  .modal-open {
+    overflow: hidden; /* Prevent scrolling when modal is open */
+  }
+  
+  .modal-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1; /* Place behind the content */
+  }
+  
+  .modal-open .container,
+  .modal-open .row,
+  .modal-open .col-md-4 {
+    filter: blur(5px); /* Apply blur effect when modal is open */
+    transition: filter 0.3s ease;
+  }
+  
+  /* Responsive adjustments for mobile */
+  @media (max-width: 768px) {
+    .modal-dialog {
+      width: 90vw; /* Adjust width for mobile */
+      max-width: 90vw; /* Ensure modal is not too wide */
+      max-height: 80vh; /* Restrict height to fit well within the viewport */
+      flex-direction: column; /* Stack content vertically on mobile */
+    }
+  
+    .modal-body {
+      flex-direction: column; /* Stack image on top and description below */
+      align-items: center; /* Center items horizontally */
+    }
+  
+    .modal-body-image {
+      margin-right: 0; /* Remove margin for mobile */
+      margin-bottom: 15px; /* Space between image and description */
+      width: 100%; /* Ensure image takes full width on mobile */
+    }
+  
+    .modal-body-description {
+      width: 100%; /* Ensure description takes full width on mobile */
+      text-align: center; /* Center text on mobile */
+    }
+  
+    .modal-footer {
+      padding: 10px;
+    }
+  }
+  
+  
+  /* Responsive adjustments for mobile */
+  @media (max-width: 768px) {
+    .modal-dialog {
+      width: 90vw; /* Adjust width for mobile */
+      max-width: 90vw; /* Ensure modal is not too wide */
+      max-height: 80vh; /* Restrict height to fit well within the viewport */
+      flex-direction: column; /* Stack content vertically on mobile */
+    }
+  
+    .modal-body {
+      flex-direction: column; /* Stack image on top and description below */
+      align-items: center; /* Center items horizontally */
+    }
+  
+    .modal-body-image {
+      margin-right: 0; /* Remove margin for mobile */
+      margin-left: -10%;
+      margin-bottom: 2px; /* Space between image and description */
+      width: 50%; /* Ensure image takes full width on mobile */
+    }
+  
+    .modal-body-description {
+      width: 100%; /* Ensure description takes full width on mobile */
+      text-align: center; /* Center text on mobile */
+    }
+  
+    .modal-footer {
+      padding: 10px;
+    }
+  }
+  

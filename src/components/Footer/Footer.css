@@ -1,0 +1,9 @@
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    /* Ensure the footer is not sticky */
+    position: relative; /* Ensure the footer is positioned relative to its container */
+  }
+  
