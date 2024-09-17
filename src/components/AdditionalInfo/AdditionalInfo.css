@@ -1,0 +1,16 @@
+#additional-info {
+    background-color: #333; /* Background color for the section */
+    padding: 50px 0; /* Padding for spacing */
+  }
+  
+  #additional-info h2 {
+    color: #f8f9fa; /* Heading color */
+  }
+  
+  #additional-info p {
+    color: #f8f9fa; /* Text color */
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
